@@ -1,0 +1,56 @@
+<p>create-visit </p>
+<h3> Create Visit </h3>
+<form (ngSubmit) = "onSubmit()">
+
+
+
+
+  <!--<div class="form-group">
+    <label> visit Place</label>
+    <input type="text" class ="form-control" id = "place" required #p="ngModel"
+           [(ngModel)] = "visit.place" name = "place">
+  </div>
+  <div class="alert alert-danger" *ngIf="p.invalid && p.touched">
+    the place Visit is a required field
+  </div>-->
+  <label for="place">Choose a country</label>
+
+  <select name="place" id="place"
+          [(ngModel)] = "visit.place" name = "place">
+    <option value="">--Please choose an option--</option>
+    <option value="nabeul">Nabeul</option>
+    <option value="tunis">Tunis</option>
+    <option value="djerba">Djerba</option>
+    <option value="bizerte">Bizerte</option>
+    <option value="gassrin">Gassrin</option>
+    <option value="gafsa">Gafsa</option>
+  </select>
+
+
+
+ <div class="form-group">
+    <label> visit Date</label>
+    <input type="text" class ="form-control" id = "date" required #d="ngModel"
+           [(ngModel)] = "visit.date" name = "date"></div>
+
+
+
+
+
+
+
+
+
+
+  <div class="form-group">
+    <label> Temps</label>
+    <input type="text" class ="form-control" id = "temps" required #t="ngModel"
+           [(ngModel)] = "visit.temps" name = "temps">
+  </div>
+  <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
+    <div *ngIf="t.errors.required">the time Visit is a required field</div>
+
+  </div>
+  <button class = "btn btn-success" type ="submit">visiter</button>
+
+</form>

@@ -1,0 +1,74 @@
+<div class="col-md-6 offset-md-3">
+  <h3> Create Property </h3>
+  <form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+      <label> Category</label>
+      <input type="text" class ="form-control" id = "category"
+             [(ngModel)] = "property.category" name = "category">
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-5">
+        <label> City</label>
+        <input type="text" class ="form-control" id = "city"
+               [(ngModel)] = "property.city" name = "city">
+      </div>
+      <div class="form-group col-md-4">
+        <label> State</label>
+        <input type="text" class ="form-control" id = "state"
+               [(ngModel)] = "property.state" name = "state">
+      </div>
+      <div class="form-group col-md-2">
+        <label> Zip</label>
+        <input type="text" class ="form-control" id = "postalCode"
+               [(ngModel)] = "property.postalCode" name = "postalCode">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-5">
+        <label> Price</label>
+        <input type="text" class ="form-control" id = "prices"
+               [(ngModel)] = property.price name = "price">
+      </div>
+      <div class="form-group col-md-5">
+        <label> Surface</label>
+        <input type="text" class ="form-control" id = "surfaces"
+               [(ngModel)] = property.surface  name = "surface">
+      </div>
+    </div>
+
+
+    <div class="form-row">
+      <div class="form-group col-md-2">
+        <label> Number Of Rooms</label>
+        <input type="number"   class ="form-control" id = "nbrRooms"
+               [(ngModel)] = property.nbrRooms  name = "nbrRooms">
+      </div>
+      <div class="form-group col-md-2">
+        <label> Number Of BathRooms</label>
+        <input type="number"   class ="form-control" id = "nbrBathrooms"
+               [(ngModel)] = property.nbrBathrooms  name = "nbrBathrooms">
+      </div>
+    </div>
+
+    <select class="custom-select">
+      <option selected>Open this select menu</option>
+      <option value="1">Rent</option>
+      <option value="2">Sale</option>
+    </select>
+
+    <br><br>
+
+    <div class="form-group">
+      <label> Description</label>
+      <textarea id="w3review" name="w3review" rows="4" cols="50" type="text" class ="form-control" id = "description"
+             [(ngModel)] = property.description name = "description">
+      </textarea>
+    </div>
+
+    <button class = "btn btn-success" type ="submit">Submit</button>
+
+  </form>
+</div>

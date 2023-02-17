@@ -1,0 +1,32 @@
+<p>update-visit works!</p>
+<h3> Update Visit </h3>
+<form (ngSubmit) = "onSubmit()">
+
+
+  <div class="form-group">
+    <label> Id Visit</label>
+    <input type="text" class ="form-control" id = "id"
+           [(ngModel)] = "visit.id" name = "id">
+  </div>
+
+  <div class="form-group">
+    <label> visit Place</label>
+    <input type="text" class ="form-control" id = "place"
+           [(ngModel)] = "visit.place" name = "place">
+  </div>
+
+  <div class="form-group">
+    <label> visit Date</label>
+    <input type="text" class ="form-control" id = "date"
+           [(ngModel)] = "visit.date" name = "date">
+  </div>
+
+  <div class="form-group">
+    <label> Temps</label>
+    <input type="text" class ="form-control" id = "temps" required #t="ngModel"
+           [(ngModel)] = "visit.temps" name = "temps">
+  </div>
+
+  <button class = "btn btn-success" type ="submit">Update Visit</button>
+
+</form>

@@ -1,0 +1,25 @@
+<h2> Property List</h2>
+<div class="search-hero">
+  <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a property">
+</div>
+<table class = "table table-striped">
+  <thead>
+  <tr>
+    <th> Category</th>
+    <th> City </th>
+    <th> Price</th>
+    <th> Actions </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let p of properties | filter:searchText" >
+    <td> {{ p.category }} </td>
+    <td> {{ p.city }} </td>
+    <td> {{ p.price }} </td>
+    <td>
+      <button (click) = "propertyDetails(p.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

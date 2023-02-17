@@ -1,0 +1,22 @@
+<h2> My Properties</h2>
+<table class = "table table-striped">
+  <thead>
+  <tr>
+    <th> Category</th>
+    <th> City </th>
+    <th> Price</th>
+    <th> Actions </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let p of properties" >
+    <td> {{ p.category }} </td>
+    <td> {{ p.city }} </td>
+    <td> {{ p.price }} </td>
+    <td>
+      <button (click) = "updateProperty(p.id)" class = "btn btn-info"> Update</button>
+      <button (click) = "deleteProperty(p.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

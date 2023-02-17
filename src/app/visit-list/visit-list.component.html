@@ -1,0 +1,78 @@
+
+<h2> Visit List</h2>
+<div class="row">
+  <div class="col-md-8">
+<table class = "table table-striped">
+  <thead>
+  <tr>
+
+
+    <th> Place</th>
+    <th> Date </th>
+    <th> Temps </th>
+    <th> Actions </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let visit of visits | search: [place.value]: ['place'];">
+
+    <td> {{ visit.place }} </td>
+    <td> {{ visit.date }} </td>
+    <td> {{ visit.temps }} </td>
+
+    <td>
+
+      <button (click) = "updateVisit(visit.id)" class = "btn btn-info"> Update</button>
+      <button (click) = "deleteVisit(visit.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+      <button (click) = "visitDetails(visit.id)" class = "btn btn-info" style="margin-left: 10px"> view</button>
+    </td>
+
+
+  </tr>
+  </tbody>
+</table>
+  </div>
+
+  <!--<div class="col-md-3">
+
+    <div class="registration-form">
+      <form>
+        <div class="form-icon">
+          <h5>Find your Visit</h5>
+        </div>
+
+        <div class="form-group">
+          <select  class="form-control item" id="type" [formControl]="place" >
+            <option value="" disabled selected>find visit</option>
+            <option value="Tunisie">Tunisie</option>
+            <option value="Nabeul">Nabeul</option>
+            <option value="Djerba">Djerba</option>
+
+          </select>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>-->
+
+
+<div class="Card">
+  <div class="CardInner">
+    <label>Search for your visit</label>
+    <div class="container">
+      <div class="Icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#657789" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div class="InputContainer">
+        <select  class="form-control item" id="type" [formControl]="place" >
+          <option value="" disabled selected>find visit</option>
+          <option value="Tunisie">Tunisie</option>
+          <option value="Nabeul">Nabeul</option>
+          <option value="Djerba">Djerba</option>
+
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
